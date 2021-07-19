@@ -24,6 +24,9 @@ html{
 .clear{
     clear: both;
 }
+.text-white{
+    color: #fff !important;
+}
 #main{
 
 }
@@ -177,6 +180,84 @@ html{
     width: 154px;
     margin-top: 15px;
     border-radius: 4px;
+}
+/*tour-section*/
+.tour-section{
+    background-color: #000;
+}
+.ticket-list{
+    background-color: #fff;
+    margin-top: 40px;
+    list-style: none;
+}
+.ticket-list li{
+    color: #757575;
+    font-size: 15px;
+    padding: 6px 16px;
+    border-bottom: 1px solid #ddd;
+}
+.ticket-list .sold-out{
+    background-color: #f44336;
+    color: #fff;
+    padding: 3px 4px;
+    margin-left: 16px;
+}
+.ticket-list .quantity{
+    float: right;
+    width: 24px;
+    height: 24px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    margin-top: -2px;
+}
+/* Places */
+.place-list{
+    margin: 32px -8px 48px;
+}
+.place-item{
+    float: left;
+    width: 33.33333%;
+    padding: 0 8px;
+}
+.place-img{
+    width: 100%;
+    display: block;
+}
+
+.place-img:hover{
+    opacity: 0.6;
+}
+.place-body{
+    padding: 16px;
+    font-size: 15px;
+    background-color: #fff;
+}
+.place-heading{
+    font-size: 15px;
+    font-weight: 600px;
+}
+.place-time{
+    margin-top: 15px;
+    color: #757575
+}
+.place-dsc{
+    margin-top: 15px;
+    line-height: 1.4;
+}
+.place-buy-btn{
+    color: #fff;
+    background-color: #000;
+    text-decoration: none;
+    padding: 11px 16px;
+    margin-top: 15px;
+    display: inline-block;
+}
+.place-buy-btn:hover{
+    color: #000;
+    background-color: #757575;
 }
 
 #footer{
