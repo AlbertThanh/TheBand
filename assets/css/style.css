@@ -6,6 +6,7 @@
 }
 html{
     font-family: Helvetica, Arial, sans-serif;
+    scroll-behavior: smooth;
 }
 
 /*
@@ -24,9 +25,59 @@ html{
 .clear{
     clear: both;
 }
+.btn{
+    color: #fff;
+    background-color: #000;
+    text-decoration: none;
+    padding: 11px 16px;
+    margin-top: 15px;
+    display: inline-block;
+    border: none;
+}
+.btn:hover{
+    color: #000;
+    background-color: #757575;
+    cursor: pointer;
+}
 .text-white{
     color: #fff !important;
 }
+.text-center{
+    text-align: center! important;
+}
+.pull-right{
+    float: right !important;
+}
+.mt-8{
+    margin-top: 8px !important;
+}
+.mt-16{
+    margin-top: 16px !important;
+}
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.col{
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.col-half{
+    width: 50%;
+}
+.col-full{
+    width: 100%;
+}
+.col-third{
+    width: 33.33333%;
+}
+
 #main{
 
 }
@@ -137,7 +188,7 @@ html{
 }
 #content .content-section{
     width: 800px;
-    padding: 64px 0;
+    padding: 64px 0 112px;
     margin-left: auto;
     margin-right: auto;
     
@@ -167,11 +218,7 @@ html{
 #content .member-list{
     margin-top: 48px;
 }
-#content .member-item{
-    float: left;
-    width: 33.33333%;
-    text-align: center;
-}
+
 #content .member-name{
     font-size: 15px;
     
@@ -215,13 +262,9 @@ html{
 }
 /* Places */
 .place-list{
-    margin: 32px -8px 48px;
+    margin-top: 32px;
 }
-.place-item{
-    float: left;
-    width: 33.33333%;
-    padding: 0 8px;
-}
+
 .place-img{
     width: 100%;
     display: block;
@@ -247,22 +290,7 @@ html{
     margin-top: 15px;
     line-height: 1.4;
 }
-.place-buy-btn{
-    color: #fff;
-    background-color: #000;
-    text-decoration: none;
-    padding: 11px 16px;
-    margin-top: 15px;
-    display: inline-block;
-}
-.place-buy-btn:hover{
-    color: #000;
-    background-color: #757575;
-}
 
-#footer{
-
-}
 
 .modal{
      position: fixed;
@@ -350,6 +378,25 @@ label.modal-label {
 
     color: #2196F3;
 }
+.contact-content{
+    margin-top: 48px;
+}
+.contact-info{
+    font-size: 18px;
+    line-height: 1.5;
+}
+.contact-info i[class*="ti-"] {
+    width: 30px;
+    display: inline-block;
+}
+.contact-form{
+    font-size: 15px;
+}
+.contact-form .form-control{
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
 
 @keyframes modalFadeIn{
     from{
@@ -360,4 +407,35 @@ label.modal-label {
         opacity: 1;
         transform: translateY(0);
     }
+}
+.map-section img{
+    width: 100%;
+    filter: grayscale(50%);
+}
+
+#footer{
+    padding: 64px 16px;
+    text-align: center; 
+}
+#footer .socials-list{
+    font-size: 24px;
+    
+}
+#footer .socials-list a{
+    color: rgba(0,0,0,0.6);
+    text-decoration: none;
+}
+
+#footer .copyright a:hover,
+#footer .socials-list a:hover{
+    color: rgba(0,0,0,0.4);
+
+}
+#footer .copyright{
+    margin-top: 15px;
+    color: rgba(0,0,0,0.6);
+}
+
+#footer .copyright a{
+    color: rgba(0,0,0,0.6);
 }
