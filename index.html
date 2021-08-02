@@ -7,6 +7,7 @@
     <title>The Band</title>
     <link rel="icon" href="https://fullstack.edu.vn/assets/favicon/apple-icon-57x57.png" type="image/x-icon"/>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
 </head>
 <body>
@@ -22,7 +23,7 @@
                     <li><a href="#tour">Tour</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li>
-                        <a href="">
+                        <a href="#">
                             More
                             <i class="nav-arrow-down ti-angle-down"></i>
                         </a>
@@ -34,14 +35,18 @@
                     </li>
                 </ul>
                 <!--End:nav-->
-                <!--Begin:Search button-->
+                <!--Search Mobile button-->
+                <div id = "mobile-menu" class="mobile-menu-btn">
+                    <i class="menu-icon ti-menu"></i>
+                </div>
+                <!--=Search button-->
                 <div class="search-btn">
                     <i class="search-icon ti-search"></i>
                 </div>  
-                <!--End:Search button-->
+                
+
 
         </div>
-
         <div id="slider">
             <div class="text-content">
                 <h2 class="text-heading">New York</h2>
@@ -136,10 +141,10 @@
                         <form action="">
                             <div class="row">
                                 <div class="col col-half">
-                                    <input type="text" name="" placeholder="Name" required id="" class="form-control">
+                                    <input type="text" name="" placeholder="Name" required id="a" class="form-control">
                                 </div>
                                 <div class="col col-half">
-                                    <input type="email" name="" placeholder="Email" required id="" class="form-control">
+                                    <input type="email" name="" placeholder="Email" required id="b" class="form-control">
                                 </div>
                             </div>
                             <div class="row mt-8">
@@ -232,6 +237,34 @@
                 event.stopPropagation()
         })
 
+    </script>
+    <script>
+        var header = document.getElementById('header');
+        var mobileMenu = document.getElementById('mobile-menu');
+        var headerHeight = header.clientHeight;
+        
+        //Open/close Menu Mobile
+        mobileMenu.onclick = function(){
+            var isClose = header.clientHeight === headerHeight ;
+            if (isClose){
+                header.style.height = 'auto';
+            }else{
+                header.style.height = null;
+            }
+
+        }
+        // Auto to close when select the menu
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+        for (var i = 0; i < menuItems.length; i++){
+            var menuItem = menuItems[i];
+            var isParentMenu = menuItem.nextElementSibling && 
+            
+
+            menuItem.onclick = function(){
+                header.style.height = null;
+            
+            }
+        }
     </script>
 
 </body>
